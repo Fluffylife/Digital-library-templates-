@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Library</title>
+</head>
+<body>
+    <h1>Books in the Library</h1>
+    <ul>
+        {% for book in books %}
+        <li>{{ book.title }} - {{ book.author }} ({{ book.genre }})</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_book') }}">Add a Book</a>
+</body>
+</html>
